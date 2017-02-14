@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <SCRIPT LANGUAGE="JavaScript" SRC="js/top.js">
+   </SCRIPT>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Arquitetura de Computadores 2</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="theme.css" rel="stylesheet">
+
+</head>
+
+<BODY onLoad="Page_Load_Complete();" onUnload="CloseHelp();">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Simulador Mips</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html" target="blank">Home</a></li>
+            <li><a href="sobre.html" target="blank">Sobre</a></li>
+            <li><a href="documentacao.html" target="blank">Documentação</a></li>
+      ]
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<body>
+
+<div class="container padding-top-100">
+
+  <h1>Documentação e Ajuda</h1>
+
+
+<h2>Instruções MIPS</h2>
+As instruções MIPS normalmente possuem 5 etapas
+<p>1. Buscar instrução da memória</p>
+<p>2. Ler registradores enquanto a instrução é decodificada</p>
+<p>3. Executar a operação ou calcular o endereço</p>
+<p>4. Acessar um operando na memória de dados</p>
+<p>5. Escrever o resultado em um registrador</p>
+
+<h2>Operações aritméticas</h2>
+<p>ADD.D – Adição ponto flutuante em precisão dupla</p>
+<p>SUBD – Subtração ponto flutuante em precisão dupla</p>
+<p>MULTD – Multiplicação ponto flutuante em precisão dupla </p>
+<p>DIV.D – Divisão ponto flutuante em precisão dupla</p>
+<p>L.D – Load word ponto flutuante em precisão dupla</p>
+<p>S.D – Store word ponto flutuante em precisão dupla</p>
+<p>ADD - Adiciona dois registros, com extensão de sinal de largura de registro.</p>
+<p>DADDUI – Adição ponto flutuante em precisão dupla imediato</p>
+<p>SUBI – subtração do conteúdo do registrador com um valor imediato</p>
+<p>MULT - Multiplica dois registradores e coloca o resultado de 64 bits em dois pontos especiais de memória</p>
+<p>DIV - Divide dois registradores e coloca o resultado inteiro de 32 bits em LO e o restante em HI.</p>
+<h2>Operações com a memória</h2>
+<p>LW –  instrução de movimentação de dados da memória para registrador ( load word )</p>
+<p>SW –  instrução de movimentação de dados do registrador para a memória ( store word )</p>
+<h2>Controle</h2>
+<p>BEQ – instrução de desvio, compara dois valores de registradores e se for igual, toma o desvio para a instrução no endereço especificado</p>
+<p>BNEZ – Instrução de desvio, toma se a comparação for igual ou menor que zero</p>
+
+
+<h2>Testes / Como utilizar</h2>
+<a href="http://www.thiagoam.com.br/ArquiteturaDeComputadores2/testes.html">Veja os testes realizados.</a>
+
+
+
+<h2>Referências Bibliográficas</h2>
+<p>[1] Computer Architecture Education Tools. University of Massachusetts Amherst. http://www.ecs.umass.edu/ece/koren/architecture/windlx/main.html. Acessado em Fevereiro de 2017.</p>
+<p>[2] Hennessy, John L. and Patterson, David A.. Computer Architecture, Fifith Edition: A Quantitative Approach. Morgan Kaufmann Publishers Inc., 2012.</p>
+</div>
+
+</body>
+
+</html>

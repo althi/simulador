@@ -1,0 +1,72 @@
+a{
+	font-weight: 800;
+}
+
+.inicio{
+	padding-top: 10px;
+}
+
+.bolha{
+
+	background-color: #ccc;
+	color: white;
+	text-align: center;
+}
+
+.execucao{
+	background-color: #d9534f;
+	color: #fff;
+	text-align: center;
+}
+
+.busca{
+
+	background-color: #f0ad4e;
+	color: #fff;
+	text-align: center;
+
+}
+
+.leitura{
+
+	background-color: #5bc0de;
+	color: #fff;
+	text-align: center;
+
+}
+
+.memoria{
+
+	background-color:  #5cb85c;
+	color: #fff;
+	text-align: center;
+
+}
+
+.escrita{
+
+	background-color: #337ab7;
+	color: #fff;
+	text-align: center;
+
+}
+
+.botaoEspacamento{
+	margin-right: 20px;
+}
+
+.padding-top-30{
+	padding-top: 30px;
+}
+
+.padding-bottom-30{
+	padding-bottom: 30px;
+}
+
+.output_form{
+	border-collapse: none;
+}
+
+.padding-top-100{
+	padding-top: 100px;
+}

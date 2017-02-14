@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script language="JavaScript" SRC="instrucoes.js">
+   </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Arquitetura de Computadores 2</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="theme.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<div class="container inicio" role="main">
+
+<p>Seja bem vindo(a) ao simulador de Pipeline Mips! Siga os passos abaixo para montar o seu pipeline. Qualquer dúvida, acesse a página de <a href="documentacao.html" target="_blank">documentação</a>.</p>
+
+
+<div class="col-md-6">
+
+<div class="alert alert-info" role="alert">1. Escolha a latência das instruções a serem executadas</div>
+
+  <form name="tabelaExecucao">
+
+<div class="panel panel-primary">
+
+  <div class="panel-heading">Latência das instruções</div>
+
+  <table class="table table-striped" valign="middle">
+    <thead>
+        <tr>
+        <th>Instrução</th>
+         <th>Latência da instrução</th>
+        </tr>
+    </thead>
+
+<!--################################################################################################################ -->
+
+    <tr>
+    <td>
+     <span class="label label-primary">Ponto Flutuante</span> Adição
+    </td>
+    <td>
+    <select name="fp_add_sub_new" onChange="MudarTempo(fp_add, this.options[this.selectedIndex].value); MudarTempo(fp_sub,this.options[this.selectedIndex].value);">    
+    <option value="1">1
+    <option value="2">2
+    <option value="3">3
+    <option value="4">4
+    <option value="5">5
+    </select>
+    </td>
+    </tr>
+
+
+<!--################################################################################################################ -->
+
+    <tr>
+    <td>
+     <span class="label label-primary">Ponto Flutuante</span> Subtração
+    </td>
+    <td>
+    <select name="fp_add_sub_new" onChange="MudarTempo(fp_add, this.options[this.selectedIndex].value); MudarTempo(fp_sub, 		this.options[this.selectedIndex].value);">    
+    <option value="1">1
+    <option value="2">2
+    <option value="3">3
+    <option value="4">4
+    <option value="5">5
+    </select>
+    </td>
+    </tr>
+
+<!--################################################################################################################ -->
+
+    <tr>
+    <td>
+     <span class="label label-primary">Ponto Flutuante</span> Divisão
+    </td>
+    <td>
+		<select name="fp_div_new" onChange="MudarTempo(fp_div, this.options[this.selectedIndex].value);">
+    <option value="1">1
+    <option value="2">2
+    <option value="3">3
+    <option value="4">4
+    <option value="5">5
+    </select>
+    </td>
+    </tr>
+
+
+    <tr>
+    <td>
+     <span class="label label-primary">Ponto Flutuante</span> Multiplicação
+    </td>
+    <td>
+		<select name="fp_mult_new" onChange="MudarTempo(fp_mult, this.options[this.selectedIndex].value);">
+    <option value="1">1
+    <option value="2">2
+    <option value="3">3
+    <option value="4">4
+    <option value="5">5
+    </select>
+    </td>
+    </tr>
+
+
+<!--################################################################################################################ -->
+
+
+<!--################################################################################################################ -->
+
+    <tr>
+    <td>
+     <span class="label label-primary">Inteiro</span> Adição
+    </td>
+    <td>
+		<select name="int_add_new" onChange="MudarTempo(int_add, this.options[this.selectedIndex].value);">
+    <option value="1">1
+    <option value="2">2
+    <option value="3">3
+    <option value="4">4
+    <option value="5">5
+    </select>
+    </td>
+    </tr>
+
+
+  <!--################################################################################################################ -->
+
+    <tr>
+    <td>
+     <span class="label label-primary">Inteiro</span> Subtração
+    </td>
+    <td>
+		<select name="int_sub_new" onChange="MudarTempo(int_sub, this.options[this.selectedIndex].value);">
+    <option value="1">1
+    <option value="2">2
+    <option value="3">3
+    <option value="4">4
+    <option value="5">5
+    </select>
+    </td>
+    </tr>
+
+<!--################################################################################################################ -->
+
+    <tr>
+    <td>
+     <span class="label label-primary">Inteiro</span> Divisão
+    </td>
+    <td>
+		<select name="int_div_new" onChange="MudarTempo(int_div, this.options[this.selectedIndex].value);">
+    <option value="1">1
+    <option value="2">2
+    <option value="3">3
+    <option value="4">4
+    <option value="5">5
+    </select>
+    </td>
+    </tr>
+
+    <!--################################################################################################################ -->
+
+    <tr>
+    <td>
+     <span class="label label-primary">Inteiro</span> Multiplicação
+    </td>
+    <td>
+		<select name="int_div_mult" onChange="MudarTempo(int_mult, this.options[this.selectedIndex].value);">
+    <option value="1">1
+    <option value="2">2
+    <option value="3">3
+    <option value="4">4
+    <option value="5">5
+    </select>
+    </td>
+    </tr>
+
+<!--################################################################################################################ -->
+ </table>
+  </form>
+
+</div><!--endPanel0-->
+
+
+
+<!-- ##################### Instruções do Pipeline ################ -->
+
+
+
+
+<div class="col-md-6 padding-bottom-30">
+
+<div class="alert alert-info" role="alert">2. Adicione abaixo as instruções do seu pipeline.</div> 
+
+  <table class="table table-striped" valign="middle">
+
+  <form name="tabelaPipeline">
+    <tr>
+    <td>Instrução</td>
+    <td>
+
+		<select name="operator" onChange="MudarInstrucao();">
+		<option value="fp_add">Float - Adição
+		<option value="fp_sub">Float - Subtração
+		<option value="fp_mult">Float - Multiplicação
+		<option value="fp_div">Float - Divisão
+		<option value="fp_ld">Float - Load
+		<option value="fp_sd">Float - Store
+		<option value="int_add">Int - Adição
+		<option	value="int_sub">Int - Subtração
+		<option value="int_mult">Int - Multiplicação
+		<option value="int_div">Int - Divisão
+		<option value="int_ld">Int - Load
+		<option value="int_sd">Int - Store
+		<option value="daddui">DADDUI
+		</select>
+    </tr>
+    </td> 
+
+
+
+    <tr>
+<td>Registrador 1</td>
+    <td>
+		<select name="registradorZero">
+		<option value="1">1
+		<option value="2">2
+		<option value="3">3
+		<option value="4">4
+		<option value="5">5
+		<option value="6">6
+		<option value="7">7
+		<option value="8">8
+		<option value="9">9
+		<option value="Offset">Offset
+		</select>
+        </tr>
+    </td>
+
+
+
+    <tr>
+ <td>Registrador 2</td>       
+    <td>
+
+		<select name="registrador1">
+		<option value="1">1
+		<option value="2">2
+		<option value="3">3
+		<option value="4">4
+		<option value="5">5
+		<option value="6">6
+		<option value="7">7
+		<option value="8">8
+		<option value="9">9
+		<option value="Offset">Offset
+		</select>
+
+        </tr>
+    </td>
+
+
+    <tr>
+ <td>Registrador 3</td>       
+    <td>
+
+		<select name="registrador2">
+		<option value="1">1
+		<option value="2">2
+		<option value="3">3
+		<option value="4">4
+		<option value="5">5
+		<option value="6">6
+		<option value="7">7
+		<option value="8">8
+		<option value="9">9
+		<option value="Offset">Offset
+		</select>
+
+        </tr>
+    </td>
+
+
+    </form>
+
+</div><!--table-->
+
+</table>
+<!--- botoes- -->
+<div class="row">
+    
+<button type="button"class="btn btn-sm btn-success botaoEspacamento" onClick="InserirInstrucao();">Inserir Instrução </button> 
+<button type="button"class="btn btn-sm btn-warning botaoEspacamento"  onClick="RemoverInstrucao();">Remover última instrução</button> 
+<button type="button"class="btn btn-sm btn-danger botaoEspacamento"  onClick="parent.location.href='index.html';">Limpar quadro</button>
+
+
+
+<p class="padding-top-30"><strong>Total de instruções: </strong><span id="qtdeInstrucoes">0</span> instruções</p>
+
+
+</div>
+ <hr>
+
+ <div class="alert alert-info" role="alert">3. Você deseja realizar adiantamento de dados? Você sabe o que é isso? <a href="documentacao.html">Veja aqui</a></div>
+
+
+   <form name="forwarding_form"> 
+    <input name="enabled_checkbox" type="checkbox" onClick="UpdateDisplay();">
+    Sim
+  </form>
+
+
+</div> <!-- end col-md-6-->
+
+
+</div><!--container-->
+
+</body>
+</html>
+
+

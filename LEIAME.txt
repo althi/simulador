@@ -1,0 +1,10 @@
+[Grupo]
+Gustavo Pains Mendes Gonçalves
+Thiago Almeida Martins Marques
+
+[Instalação]
+Para executar a aplicação, basta descompactar o arquivo gerado e abrir o arquivo index.html em seu navegador preferido (Exemplo: Google Chrome, Firefox, Safari).
+Obs: Necessário ter um servidor apache instalado. Recomendação: WAMP / XAMPP.
+
+[Alternativa]
+Para facilitar a visualização, o trabalho encontra no link: www.thiagoam.com.br/ArquiteturaDeComputadores2

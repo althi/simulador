@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <SCRIPT LANGUAGE="JavaScript" SRC="js/top.js">
+   </SCRIPT>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Arquitetura de Computadores 2</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="theme.css" rel="stylesheet">
+
+</head>
+
+<BODY onLoad="Page_Load_Complete();" onUnload="CloseHelp();">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Simulador Mips</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html" target="blank">Home</a></li>
+            <li><a href="sobre.html" target="blank">Sobre</a></li>
+            <li><a href="documentacao.html" target="blank">Documentação</a></li>
+      ]
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<body>
+
+<div class="container padding-top-100">
+
+  <h1>Testes</h1>
+
+  <p>Esta página apresenta alguns testes e exemplificações de uso do simulador</p>
+
+  <h3>Sem conflito de instruções</h3>
+
+  <h5>Instruções do mesmo tipo</h5>
+
+  <p>ADDD (F1, F1, F1)</p>
+  <p>ADDD (F2, F3,F4</p>
+  <img src="img/semconflito.jpg"/>
+  <hr>
+
+  <h5>Instruções de tipos diferentes</h5>
+  <p>ADDD (F1, F1, F1)</p>
+  <p>ADDI (R1, R1,R1</p>
+  <img src="img/semconflito2.jpg"/>
+
+
+  <h3>Com conflito de instruções</h3>
+
+  <h5>Float</h5>
+
+  <p>SUBD (F1, F1, F1)</p>
+  <p>SUBD (F1, F2,F2)</p>
+  <img src="img/comconflito.jpg"/>
+
+  <hr>
+
+  <h5>Int</h5>
+
+  <p>SUB.I (R1, R1, R1)</p>
+  <p>DIV.I (R1, R5, R3)</p>
+  <img src="img/comconflito2.jpg"/>
+
+
+  <hr>
+
+  <h5>Aumento do ciclo de execução</h5>
+
+  <p>ADDD (1, 1, 1)</p>
+  <p>ADDI (R1, R1, R1)</p>
+  <p>DIVD (F1, F1, F1)</p>
+  <p>MULT (R1, R1, R1)</p>
+
+  <img src="img/comconflito3.jpg"/>
+
+
+  <h2></h2>
+  
+</div>
+
+</body>
+
+</html>
